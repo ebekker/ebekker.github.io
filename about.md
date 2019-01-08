@@ -15,7 +15,8 @@ I work in the software development space.  These days I focus mostly on .NET tec
 
 <!-- stolen from https://daveaglick.com/about thanks! -->
 <ul class="list-unstyled">
-    <li><a href="https://twitter.com/ebekker"><i class="fa fa-twitter"></i> Twitter (ebekker)</a></li>
+    <li><a href="https://twitter.com/ebekker"><i
+			class="fa fa-twitter"></i> Twitter (ebekker)</a></li>
     <li><a href="https://github.com/ebekker"><i
 			class="fa fa-github"></i> GitHub (ebekker)</a></li>
     <li><a href="https://keybase.io/ebekker"><i
