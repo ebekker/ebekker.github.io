@@ -9,7 +9,7 @@ The goal of this version is to address a few shortcomings and changes that are e
 or desired.  Some folks have questioned if the ACMESharp project is still alive and I wanted to
 let people know that the project *is* alive, but also what they can expect and when.
 
-# How ACMESharp Came to Be
+## How ACMESharp Came to Be
 
 The ACMESharp project officially began in 2015.  After I discovered the Let's Encrypt effort, about
 a year before that, I had initially [proposed](https://github.com/certbot/certbot/issues/116) that LE
@@ -41,7 +41,7 @@ to help others by answering questions in issues, or writing supplementary script
 shortcomings of the core project, or contributing a Provider library to extend native support
 for a new service provider -- thank you all, it's definitely been noticed and appreciated!
 
-# Where ACMESharp is Going
+## Where ACMESharp is Going
 
 So now that it's not quite three years going, the project is now (over)due for a little refresh.
 The .NET platform and related technologies like PowerShell have gone through a bit of a
@@ -60,7 +60,7 @@ underway:
 
 In the rest of this post, I'll talk a bit about each of these and my thoughts.
 
-## Moving to .NET Standard and .NET Core
+### Moving to .NET Standard and .NET Core
 
 The .NET platform has evolved a good bit in the last few years with the move to OSS,
 adoption of simpler and cleaner
@@ -88,7 +88,7 @@ but there will be a stronger delineation between the protocol core that implemen
 supporting and related areas like Authorization support.  I'll touch on that in more detail down
 below when I talk about restructuring.
 
-## Moving to ACME v2
+### Moving to ACME v2
 
 The Let's Encrypt project has had time over the last few years and a
 [few million certificates](https://letsencrypt.org/stats/#growth) to test out their initial
@@ -103,7 +103,7 @@ support for v2 has been [released](https://letsencrypt.org/2017/06/14/acme-v2-ap
 will be the path moving forward, focusing only on v2 will allow faster development and a cleaner
 design for the next generation of ACMESharp.
 
-## Missing Features Will Be Implemented
+### Missing Features Will Be Implemented
 
 Now, some parts of ACME v1 were never implemented or supported in ACMESharp.  Things like
 revocation or recovery keys as base protocol operations, or support for TLS-based challenges
@@ -129,7 +129,7 @@ These are just a few of the things in the core protocol client library, but I ho
 similar improvements in the supporting libraries and tools, which leads me to the changes in
 project structure.
 
-## Restructuring the Project
+### Restructuring the Project
 
 After working with the existing project structure for a few years, I found a few issues with
 the way that the project was initially setup and hindered its growth and community support.
@@ -137,7 +137,7 @@ For starters, as a GitHub project directly under my personal user account, it pr
 from allowing outside contributors from becoming first-class members of the project and
 managing contributions with the same level of authority.
 
-### PKISharp - GitHub Organization
+#### PKISharp - GitHub Organization
 
 To address this challenge a separate project [organization](https://github.com/PKISharp) has
 been setup and will serve as the new home for ACMESharpCore and related projects, such as other
@@ -153,7 +153,7 @@ setup using ACME certs -- moved under this org as well.
 the start, initially as just a playground to experiment with some new ideas, and now the
 the home of the official ACMESharp 2.x code base.
 
-### Reorganizing Solutions and Projects
+#### Reorganizing Solutions and Projects
 
 Another area that I think caused confusion and created obstacles was the internal
 structure of the projects themselves.  For starters, right from the beginning there was a
@@ -194,7 +194,7 @@ host these in their own repos and the ACMESharp project page would just referenc
 these repos, but that hasn't worked out for various reasons, so hopefully adding these
 will reduce the barriers and improve contributor engagement.
 
-## Moving to MIT License
+### Moving to MIT License
 
 Lastly, one of the changes with ACMESharpCore will be the adoption of the MIT license.
 This seems to be the *norm* for the .NET OSS community spurred by Microsoft's own decisions
@@ -203,7 +203,7 @@ as this becomes less restrictive than the original code base and any contributio
 may have been attributed to authors under the original license and carried forward will
 be squared away as needed.
 
-# So What's Next?
+## So What's Next?
 
 I'm glad you asked!   So the good news is, a good bit of the work is already underway
 and even completed.  The
