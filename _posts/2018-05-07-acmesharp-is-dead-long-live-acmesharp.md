@@ -1,6 +1,6 @@
 ---
 published: true
-draft: true
+draft: false
 title: ACMESharp is Dead.  Long Live ACMESharp!
 author: Eugene Bekker
 ---
