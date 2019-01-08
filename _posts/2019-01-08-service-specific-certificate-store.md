@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Service-Specific Certificate Store
-draft: true
+draft: false
 ---
 
 Recently I ran into situation where I needed to access the Certificate Store *scoped* to a specific Windows Service.  If you're not familiar with this, the Certificate Store on Windows can be scoped to different levels.  There's the global store that's scoped to `LocalMachine`, then there are user-specific stores which default to the `CurrentUser`.
@@ -21,7 +21,7 @@ and
 
 > AD DS detects when a new certificate is dropped into its certificate store and then triggers an SSL certificate update without having to restart AD DS or restart the domain controller.
 
-Nice!  Updating the certificate used to secure the LDAPS interface without a server, or even a service restart!  But therein lies the the rub -- all the documentation I've found to install a certificate into a service-specific certificate store always described the process using the graphical MMC tool, such as [this one](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Exporting_the_LDAPS_Certificate_and_Importing_for_use_with_AD_DS) and [this one](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941846(v=ws.10)#to-import-a-certificate-into-the-ad-ds-personal-store).
+Nice!  Updating the certificate used to secure the LDAPS interface without a server, or even a service restart!  But all the documentation I've found to install a certificate into a service-specific certificate store always described the process using the graphical MMC tool, such as [this one](https://social.technet.microsoft.com/wiki/contents/articles/2980.ldap-over-ssl-ldaps-certificate.aspx#Exporting_the_LDAPS_Certificate_and_Importing_for_use_with_AD_DS) and [this one](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941846(v=ws.10)#to-import-a-certificate-into-the-ad-ds-personal-store).
 
 Just a quick recap:
 
@@ -81,16 +81,16 @@ There are two variations of this API call, corresponding to the two different wa
     internal static extern IntPtr CertOpenStoreStringPara(int storeProvider, int encodingType,
                                                           IntPtr hcryptProv, int flags, String pvPara);
 
-	public static X509Store OpenStore(string serviceName, string storeName)
+    public static X509Store OpenStore(string serviceName, string storeName)
     {
-      var storeHandle = CertOpenStoreStringPara(
-        13           // CERT_STORE_PROV_SYSTEM_REGISTRY_W
-        ,0           // No encoding type for registry stores
-        ,IntPtr.Zero // NULL for the crypto provider implies default
-        ,(5 << 16)   // CERT_SYSTEM_STORE_SERVICES_ID for Upper Word
-        , $"{serviceName}\\{storeName}");
+        var storeHandle = CertOpenStoreStringPara(
+            13           // CERT_STORE_PROV_SYSTEM_REGISTRY_W
+            ,0           // No encoding type for registry stores
+            ,IntPtr.Zero // NULL for the crypto provider implies default
+            ,(5 << 16)   // CERT_SYSTEM_STORE_SERVICES_ID for Upper Word
+            , $"{serviceName}\\{storeName}");
       
-      return new X509Store(storeHandle);
+        return new X509Store(storeHandle);
     }
 ```
 
@@ -98,7 +98,7 @@ Once we have this working code in .NET, we can leverage in PowerShell.  We can't
 
 ## ServiceCertStore Tools
 
-I've wrapped up all this basic functionality along with a bit more error handling and a convenient utility class, and made it available as:
+I've wrapped up all this basic functionality along with a bit more error handling into a convenient utility class, and made it available as:
 
 * a .NET assembly available on [nuget](https://www.nuget.org/packages/Zyborg.Security.Cryptography.ServiceCertStore/)
 * a PowerShell Module that offers the basic list, add and remove features on the [PowerShell Gallery](https://www.powershellgallery.com/packages/ServiceCertStore)
