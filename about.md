@@ -27,6 +27,3 @@ I work in the software development space.  These days I focus mostly on .NET tec
 			class="fa fa-linkedin"></i> LinkedIn</a></li>-->
 </ul>
 
-<div><a href="https://github.com/ebekker"><i class="svg-icon github">GitHub</i></a></div>
-<div><a href="https://www.twitter.com/ebekker"><i class="svg-icon twitter">Twitter</i></a></div>
-
