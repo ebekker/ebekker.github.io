@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Service-Specific Certificate Store
 ---
@@ -32,4 +32,3 @@ Pretty painless as far as GUI operations go, but in a perfect world we should be
 A quick search for any way to manage service-specific certs in a scriptable fashion indicates that no such facility exists, such as [this](https://stackoverflow.com/questions/5149607/how-to-open-a-windows-service-certificate-store) and [this](https://social.technet.microsoft.com/Forums/en-US/07be0526-a8e7-4453-a1b0-910ff959758b/import-certificate-into-service-accounts-personal-store?forum=winserversecurity).
 
 While Windows PowerShell does provide access to the Windows Certificate Store in the form of a [Certificate Provider](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/about/about_certificate_provider), it's restricted to only accessing `LocalMachine` and `CurrentUser` store locations.  This makes sense since PowerShell is making use of the facilities that are already available in the unerdlying .NET platform, and a quick look at the [StoreLocation](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.storelocation) enumeration shows these are the only two store locations that .NET makes available.
-
