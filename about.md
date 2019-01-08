@@ -22,7 +22,7 @@ My name is Eugene Bekker.  I work in the software development space.  These days
     <li><a href="https://keybase.io/ebekker"><i
 			class="fa fa-key"></i> Keybase (ebekker)</a></li>
     <!--<li><a href="http://stackoverflow.com/users/807064/daveaglick"><i
-			class="fa fa-stack-overflow"></i> Stack Overflow (daveaglick)</a></li>-->
+			class="fab fa-stack-overflow"></i> Stack Overflow (daveaglick)</a></li>-->
     <!--<li><a href="http://www.linkedin.com/pub/dave-glick/a/871/424/"><i
-			class="fa fa-linkedin"></i> LinkedIn</a></li>-->
+			class="fab fa-linkedin"></i> LinkedIn</a></li>-->
 </ul>
