@@ -9,7 +9,7 @@ Some information about me
 
 ### More Information
 
-I work in the software development space.  These days I focus mostly on .NET technologies.
+My name is Eugene Bekker.  I work in the software development space.  These days I focus mostly on .NET technologies.
 
 ### Contact me
 
