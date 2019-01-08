@@ -16,9 +16,9 @@ My name is Eugene Bekker.  I work in the software development space.  These days
 <!-- stolen from https://daveaglick.com/about thanks! -->
 <ul class="list-unstyled">
     <li><a href="https://twitter.com/ebekker"><i
-			class="fa fa-twitter"></i> Twitter (ebekker)</a></li>
+			class="fab fa-twitter"></i> Twitter (ebekker)</a></li>
     <li><a href="https://github.com/ebekker"><i
-			class="fa fa-github"></i> GitHub (ebekker)</a></li>
+			class="fab fa-github"></i> GitHub (ebekker)</a></li>
     <li><a href="https://keybase.io/ebekker"><i
 			class="fa fa-key"></i> Keybase (ebekker)</a></li>
     <!--<li><a href="http://stackoverflow.com/users/807064/daveaglick"><i
@@ -26,4 +26,3 @@ My name is Eugene Bekker.  I work in the software development space.  These days
     <!--<li><a href="http://www.linkedin.com/pub/dave-glick/a/871/424/"><i
 			class="fa fa-linkedin"></i> LinkedIn</a></li>-->
 </ul>
-
