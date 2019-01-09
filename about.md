@@ -7,6 +7,14 @@ published: true
 
 My personal log of close encounters with technology.
 
+Some things that I'm currently focused on:
+<ul style="list-style: none;">
+    <li>.NET / C#</li>
+    <li>PowerShell</li>
+    <li>AWS / Azure/ GCP</li>
+    <li>SecDevOps</li>
+</ul>
+
 <!--
 ### More Information
 
