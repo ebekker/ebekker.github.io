@@ -5,16 +5,18 @@ permalink: /about/
 published: true
 ---
 
-Some information about me
+My personal log of close encounters with technology.
 
+<!--
 ### More Information
 
 My name is Eugene Bekker.  I work in the software development space.  These days I focus mostly on .NET technologies.
+-->
 
 ### Contact me
 
 <!-- stolen from https://daveaglick.com/about thanks! -->
-<ul class="list-unstyled">
+<ul style="list-style: none;">
     <li><a href="https://twitter.com/ebekker"><i
 			class="fab fa-twitter"></i> Twitter (ebekker)</a></li>
     <li><a href="https://github.com/ebekker"><i
