@@ -11,8 +11,8 @@ Some things that I'm currently focused on:
 <ul style="list-style: none;">
     <li>.NET / C#</li>
     <li>PowerShell</li>
-    <li>AWS / Azure/ GCP</li>
-    <li>SecDevOps</li>
+    <li>AWS / Azure / GCP</li>
+    <li><a href="https://www.cspi.com/devsecops-vs-secdevops-blog/">SecDevOps</a></li>
 </ul>
 
 <!--
