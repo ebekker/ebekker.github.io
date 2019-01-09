@@ -34,5 +34,5 @@ My name is Eugene Bekker.  I work in the software development space.  These days
     <!--<li><a href="http://stackoverflow.com/users/807064/daveaglick"><i
 			class="fab fa-stack-overflow"></i> Stack Overflow (daveaglick)</a></li>-->
     <li><a href="https://www.linkedin.com/in/ebekker/"><i
-			class="fab fa-linkedin"></i> LinkedIn</a></li>-->
+			class="fab fa-linkedin"></i> LinkedIn</a></li>
 </ul>
